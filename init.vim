@@ -11,14 +11,13 @@
 
 " Plug-ins
 
-:set nocompatible
-
 call plug#begin()
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/tagbar'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'ap/vim-css-color'
 Plug 'rafi/awesome-vim-colorschemes'
@@ -28,12 +27,25 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'rstacruz/vim-closer'
 Plug 'tmsvg/pear-tree'
 Plug 'glepnir/dashboard-nvim'
-Plug 'ap/vim-buftabline'
 Plug 'mattn/emmet-vim'
+Plug 'zefei/vim-wintabs'
+Plug 'zefei/vim-wintabs-powerline'
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
 Plug 'rmagatti/goto-preview'
+Plug 'neoclide/coc.nvim'
+
+
+
+let g:coc_disable_startup_warning = 1
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#alt_sep = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_count = 1
+let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 
 call plug#end()
 
@@ -49,11 +61,12 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-p> :PlugInstall<CR>
 nnoremap <C-s> :w<CR>
-nnoremap <C-w> :wq<CR>
+nnoremap <C-m> :wq<CR>
 nnoremap <C-q> :q<CR>
 nnoremap <C-c> :PlugClean<CR>
-nnoremap <C-a> :bprev<CR>
-nnoremap <C-z> :bnext<CR>
+nnoremap <C-a> :bprev!<CR>
+nnoremap <C-z> :bnext!<CR>
+nnoremap <C-w> :tabclose<CR>
 
 " Changing line positions w/ Alt-j && Alt-k
 
@@ -64,7 +77,9 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <A-C-j> yyp
 nnoremap <A-C-k> yyP
 
-" Indentation
+" Indentation!
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+
+

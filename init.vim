@@ -39,13 +39,6 @@ Plug 'neoclide/coc.nvim'
 
 
 let g:coc_disable_startup_warning = 1
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#show_splits = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#alt_sep = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_count = 1
-let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 
 call plug#end()
 

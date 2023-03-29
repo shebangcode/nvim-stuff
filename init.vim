@@ -1,13 +1,14 @@
 " Basic settings
 
 :set number
-
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
 :set mouse=a
+:set noshowmode
+:set laststatus=2
 
 " Plug-ins
 
@@ -34,13 +35,17 @@ Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
 Plug 'rmagatti/goto-preview'
-Plug 'neoclide/coc.nvim'
-
-
-
-let g:coc_disable_startup_warning = 1
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
+
+" Variables
+
+let g:coc_disable_startup_warning = 1
+let g:airline_powerline_fonts = 1
+let g:neovide_transparency = 0.9
+let g:neovide_fullscreen = v:true
+
 
 " Color scheme
 
@@ -74,5 +79,4 @@ nnoremap <A-C-k> yyP
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
-
 
